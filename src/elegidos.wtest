@@ -1,0 +1,42 @@
+import fixture.*
+import jurado.*
+import elegidos.*
+
+test "juez baboso da 10 puntos a chica joven" {
+	const cantante = fixture.crearChicaJovenPop()
+	const votante = new Baboso() 
+	assert.equals(10, votante.puntosPara(cantante))
+}
+
+test "juez tradicional da -5 puntos a cantante pop " {
+	const cantante = fixture.crearChicaJovenPop()
+	const votante = new Tradicional() 
+	assert.equals(-5, votante.puntosPara(cantante))
+}
+
+test "pulico que sigue a juez tecnico da 2 puntos a cantante pop " {
+	const cantante = fixture.crearChicaJovenPop()
+	const votante = new PublicoIdentificado(new Tecnico()) 
+	assert.equals(2, votante.puntosPara(cantante))
+}
+
+test "cantante pop joven obtiene 7 puntos con juez baboso, juez tradicional y publico identificado con juez tecnico" {
+	const cantante = fixture.crearChicaJovenPop()
+	fixture.conformarJurado()
+	assert.equals(7, elegidos.puntosTotales(cantante))
+}
+
+test "viejo tanguero obtiene 4 puntos con juez baboso, juez tradicional y publico identificado con juez tecnico" {
+	const cantante = fixture.crearViejoTanguero()
+	fixture.conformarJurado()
+	assert.equals(4, elegidos.puntosTotales(cantante))
+}
+
+test "chica joven pop gana frente a viejo tanguero " {
+	const chica = fixture.crearChicaJovenPop()
+	const viejo = fixture.crearViejoTanguero()
+	elegidos.agregarParticipante(chica)
+	elegidos.agregarParticipante(viejo)
+	fixture.conformarJurado()
+	assert.equals(chica, elegidos.ganador())
+}
