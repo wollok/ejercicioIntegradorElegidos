@@ -2,6 +2,7 @@
 ## Ejercicio integrador
 
 ![](elegidos.jpg)
+
 **Cansados de construir software, ahora nos dedicamos a la música, a cantar y a bailar. En la búsqueda del mejor artista vemos que el jurado no se pone de acuerdo y  que necesita ayuda para determinar con precisión y justicia al ganador, por lo que sin olvidar los viejos hábitos, planteamos una solución en el paradigma de objetos.**
 
 El programa consta de un jurado conformado por varios jueces invitados, quienes escuchan a todos los cantantes y deciden si votan a cada uno de ellos de forma positiva o negativa, según su propio criterio. Cada voto positivo vale 10 puntos y los votos negativos restan la mitad.
