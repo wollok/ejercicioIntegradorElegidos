@@ -2,7 +2,7 @@ import fixture.*
 import jurado.*
 import elegidos.*
 
-test "juez baboso da 10 puntos a chica joven" {
+test "juez  baboso da 10 puntos a chica joven" {
 	const cantante = fixture.crearChicaJovenPop()
 	const votante = new Baboso() 
 	assert.equals(10, votante.puntosPara(cantante))
