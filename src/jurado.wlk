@@ -1,4 +1,5 @@
 import cantantes.*
+import elegidos.*
 
 class Votante {
 	
@@ -11,7 +12,7 @@ class Votante {
 	method puntosPositivos()
 
 	method puntosNegativos() {
-		return -self.puntosPositivos()/2
+		return 0-self.puntosPositivos()/2
 	}
 }
 
@@ -74,7 +75,6 @@ class PublicoIdentificado inherits Publico{
 object argentina {
 
 	var generos = [tango, folklore]
-	
 	method esGeneroPropio(genero){
 		return generos.contains(genero)
 	}

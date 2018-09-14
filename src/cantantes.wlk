@@ -1,4 +1,7 @@
-class Cantante{
+import jurado.*
+import elegidos.*
+
+class Cantante{ 
 	
 	var bailaBien 
 	var afinado 

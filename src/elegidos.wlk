@@ -1,7 +1,10 @@
+import cantantes.*
+import jurado.*
+
 object elegidos{
 	
 	var jurado = []
-	var participantes = []
+	var participantes = [] 
 	
 	method agregarJuez(unJuez){
 		jurado.add(unJuez)

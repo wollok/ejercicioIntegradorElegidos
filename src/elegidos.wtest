@@ -1,6 +1,6 @@
 import cantantes.*
 import elegidos.*
-import jurado.*
+import jurado.* 
 
 
 describe "tests elegidos" {
