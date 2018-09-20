@@ -3,15 +3,15 @@ import elegidos.*
 import jurado.* 
 
 
-describe "tests elegidos" {
-	const chicaJovenPop = new Cantante(false, false, 25, 'F', new Cancion("pop corn",pop))
-	const viejoTanguero = new Cantante(true, true, 70, 'M', new Cancion("tango tranquilo", tango))
-    const juezBaboso = new Baboso()
+describe "tests elegidos" { 
+	const chicaJovenPop = new Cantante( afinado= false, edad = 20, cancion = new Cancion(autor = "micheal",genero = pop))
+	const viejoTanguero = new Cantante(bailaBien = false, edad = 70, cancion = new Cancion(autor = "polaco", genero = tango))
+    const juezBaboso = new Baboso() 
     const juezTradicional = new Tradicional()
     const juezTecnico = new Tecnico()
-	const publicoTecnico = new PublicoIdentificado(juezTecnico)
+	const publicoTecnico = new PublicoIdentificado(juez = juezTecnico)
 
-	fixture  {
+	fixture {
 		elegidos.agregarJuez(juezBaboso ) 
 		elegidos.agregarJuez(juezTradicional ) 
 		elegidos.agregarJuez(publicoTecnico ) 	

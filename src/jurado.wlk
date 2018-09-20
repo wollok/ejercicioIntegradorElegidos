@@ -12,7 +12,7 @@ class Votante {
 	method puntosPositivos()
 
 	method puntosNegativos() {
-		return 0-self.puntosPositivos()/2
+		return -self.puntosPositivos()/2
 	}
 }
 
@@ -62,10 +62,6 @@ class Publico inherits Votante {
 class PublicoIdentificado inherits Publico{
 	var juez
 	
-	constructor(unJuez){
-		juez = unJuez
-	}
-	
 	override method leGusta(participante){
 		return juez.leGusta(participante)
 	}
@@ -74,7 +70,7 @@ class PublicoIdentificado inherits Publico{
 
 object argentina {
 
-	var generos = [tango, folklore]
+	const generos = [tango, folklore]
 	method esGeneroPropio(genero){
 		return generos.contains(genero)
 	}

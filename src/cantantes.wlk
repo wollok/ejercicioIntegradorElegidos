@@ -3,21 +3,13 @@ import elegidos.*
 
 class Cantante{ 
 	
-	var bailaBien 
-	var afinado 
-	var edad 
-	var sexo
-	var cancion
+	var property bailaBien = true 
+	var property afinado = true
+	var edad
+	var property cancion
+	var sexo = 'F'
 	var apariencia = []
 
-	constructor(_bailaBien, _afinado, _edad, _sexo, _cancion){
-		bailaBien = _bailaBien
-		afinado = _afinado
-		edad = _edad
-		sexo = _sexo
-		cancion = _cancion
-	}	
-	
 	method usa(prenda){
 		return apariencia.contains(prenda)
 	}
@@ -26,9 +18,6 @@ class Cantante{
 		apariencia.add(prenda)
 	}
 	
-	method bailaBien(){
-		return bailaBien
-	}
 	method esMujer() {
 		return sexo == 'F'
 	}
@@ -38,9 +27,7 @@ class Cantante{
 	method esMayor() {
 		return edad > 50
 	}
-	method afinado() {
-		return afinado
-	}
+	
 	method genero() {
 		return cancion.genero() 
 	}
@@ -52,18 +39,8 @@ class Cantante{
 
 class Cancion{
 	
-	var autor
-	var genero
-	
-	constructor(unAutor, unGenero){
-		autor = unAutor
-		genero = unGenero
-	}
-	
-	method genero(){
-		return genero
-	}
-	
+	var property autor
+	var property genero
 
 }
 
