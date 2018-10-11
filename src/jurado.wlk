@@ -23,7 +23,7 @@ class Juez inherits Votante{
 	}
 }
 
-class Baboso inherits Juez {
+class Machirulo inherits Juez {
 	
 	override method leGusta(participante){
 		return participante.esJoven() and participante.esMujer()
