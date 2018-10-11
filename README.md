@@ -7,7 +7,7 @@
 
 El programa consta de un jurado conformado por varios jueces invitados, quienes escuchan a todos los cantantes y deciden si votan a cada uno de ellos de forma positiva o negativa, según su propio criterio. Cada voto positivo vale 10 puntos y los votos negativos restan la mitad.
 
-- Los jueces babosos votan positivamente a las cantantes jóvenes. 
+- Los jueces machirulos votan positivamente a las cantantes jóvenes. 
 - Los tradicionalistas votan de forma positiva si el género elegido por el cantante es propio de nuestro país (por ejemplo el folklore y el tango).
 - Los técnicos prefieren a aquellos artistas cuya presentación encaja con el género elegido.
 
