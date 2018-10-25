@@ -24,16 +24,15 @@ class Cantante{
 	method esJoven() {
 		return edad <= 30
 	}
-	method esMayor() {
-		return edad > 50
-	}
+	method esMayor() = edad > 50
+	
 	
 	method genero() {
 		return cancion.genero() 
 	}
-	method encajaApariencia() {
-		return self.genero().encajaApariencia(self)
-	}
+	method encajaApariencia() =
+		self.genero().encajaApariencia(self)
+
 	
 }
 
