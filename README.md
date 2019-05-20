@@ -1,4 +1,7 @@
 # Elegidos
+ 
+[![Build Status](https://travis-ci.org/wollok/ejercicioIntegradorElegidos.svg?branch=master)](https://travis-ci.org/wollok/ejercicioIntegradorElegidos)
+
 ## Ejercicio integrador
 
 ![](elegidos.jpg)
