@@ -60,7 +60,7 @@ class Publico inherits Votante {
 }
 
 class PublicoIdentificado inherits Publico{
-	var juez
+	const juez
 	
 	override method leGusta(participante){
 		return juez.leGusta(participante)
