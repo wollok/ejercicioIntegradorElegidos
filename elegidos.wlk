@@ -3,8 +3,8 @@ import jurado.*
 
 object elegidos{
 	
-	var jurado = []
-	var participantes = [] 
+	const jurado = []
+	const participantes = [] 
 	
 	method agregarJuez(unJuez){
 		jurado.add(unJuez)
