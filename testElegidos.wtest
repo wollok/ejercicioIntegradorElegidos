@@ -1,0 +1,46 @@
+import cantantes.*
+import elegidos.*
+import jurado.* 
+
+
+describe "tests elegidos" { 
+	const chicaJovenPop = new Cantante( afinado= false, edad = 20, cancion = new Cancion(autor = "micheal",genero = pop))
+	const viejoTanguero = new Cantante(bailaBien = false, edad = 70, cancion = new Cancion(autor = "polaco", genero = tango))
+    const juezMachirulo = new Machirulo() 
+    const juezTradicional = new Tradicional()
+    const juezTecnico = new Tecnico()
+	const publicoTecnico = new PublicoIdentificado(juez = juezTecnico)
+
+	method initialize() {
+		elegidos.agregarJuez(juezMachirulo ) 
+		elegidos.agregarJuez(juezTradicional ) 
+		elegidos.agregarJuez(publicoTecnico ) 	
+		elegidos.agregarParticipante(chicaJovenPop)
+		elegidos.agregarParticipante(viejoTanguero)
+	}
+
+test "juez  machirulo da 10 puntos a chica joven" {
+	assert.equals(10, juezMachirulo.puntosPara(chicaJovenPop))
+}
+
+test "juez tradicional da -5 puntos a cantante pop " {
+	assert.equals(-5, juezTradicional.puntosPara(chicaJovenPop))
+}
+
+test "publico que sigue a juez tecnico da 2 puntos a cantante pop " {
+	assert.equals(2, publicoTecnico.puntosPara(chicaJovenPop))
+}
+
+test "cantante pop joven obtiene 7 puntos con juez machirulo, juez tradicional y publico identificado con juez tecnico" {
+	assert.equals(7, elegidos.puntosTotales(chicaJovenPop))
+}
+
+test "viejo tanguero obtiene 4 puntos con juez machirulo, juez tradicional y publico identificado con juez tecnico" {
+	assert.equals(4, elegidos.puntosTotales(viejoTanguero))
+}
+
+test "chica joven pop gana frente a viejo tanguero " {
+	assert.equals(chicaJovenPop, elegidos.ganador())
+}
+
+}

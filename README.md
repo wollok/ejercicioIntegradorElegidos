@@ -1,6 +1,6 @@
 # Elegidos
  
-[![Build Status](https://travis-ci.org/wollok/ejercicioIntegradorElegidos.svg?branch=master)](https://travis-ci.org/wollok/ejercicioIntegradorElegidos)
+[![Build Status](https://github.com/wollok/ejercicioIntegradorElegidos/actions/workflows/ci.yml/badge.svg)](https://github.com/wollok/ejercicioIntegradorElegidos/actions/workflows/ci.yml)
 
 ## Ejercicio integrador
 
